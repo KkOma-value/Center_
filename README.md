@@ -6,7 +6,7 @@ kkoma的第一个前后端分离项目（有些难看），很多功能不是很
 
 技术选型：
 
-前端：主要运用阿里 Ant Design 生态：HTML + CSS + JavaScript 三件套，React 开发框架，Ant Design Pro项目模板，Ant Design 端组件库，Umi 开发框架，Umi Request 请求库，正向和反向代理
+前端：主要运用阿里 Ant Design 生态：HTML + CSS + JavaScript 三件套，React 开发框架，Ant Design Pro项目模板，Ant Design 端组件库，Umi 开发框架，Umi Request 请求库
 
 后端：
 Java 编程语言，
