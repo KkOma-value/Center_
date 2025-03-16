@@ -67,10 +67,7 @@ public class UserController {
 
     @GetMapping("/select")
     public List<User> select(String user_account,HttpServletRequest request) {
-
-        if (!isAdmin(request)){
-            return new ArrayList<>();
-        }
+        
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         if (StringUtils.isNotBlank(user_account)){
             queryWrapper.like("user_account",user_account);
@@ -90,6 +87,22 @@ public class UserController {
             return false;
         }
         return userService.removeById(id);
+    }
+
+    @PostMapping("/deleteBatch")
+    public boolean deleteBatch(@RequestBody List<Long> idList, HttpServletRequest request) {
+        // 1. 检查是否为管理员
+        if (!isAdmin(request)){
+            return false;
+        }
+
+        // 2. 检查参数
+        if (idList == null || idList.isEmpty()){
+            return false;
+        }
+
+        // 3. 批量删除用户
+        return userService.removeByIds(idList);
     }
 
     /***
