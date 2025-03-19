@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  # 如果需要连接后端服务，取消下面的注释
+  # backend:
+  #   image: your-backend-image
+  #   container_name: backend
+  #   restart: always
+  #   environment:
+  #     - NODE_ENV=production
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - app-network
+
+networks:
+  app-network:
+    driver: bridge 

@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background: #f0f2f5;
+}
+
+.content {
+  flex: 1;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  width: 368px;
+  margin: 0 auto;
+  padding: 32px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.headerTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 33px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.registerForm {
+  width: 100%;
+}
+
+.inputItem {
+  margin-bottom: 24px;
+}
+
+.prefixIcon {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.submitButton {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  
+  &:hover {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+  }
+}
+
+.linkContainer {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.link {
+  color: #1890ff;
+  text-decoration: none;
+  font-size: 14px;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+:global {
+  .ant-input-affix-wrapper {
+    height: 40px;
+    border-radius: 4px;
+    
+    .ant-input {
+      height: 100%;
+    }
+  }
+  
+  .ant-btn-primary {
+    height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    background-image: url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg');
+    background-repeat: no-repeat;
+    background-position: center 110px;
+    background-size: 100%;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.otherLoginIcons {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    margin: 0 8px;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    background-image: url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg');
+    background-repeat: no-repeat;
+    background-position: center 110px;
+    background-size: 100%;
+  }
+} 
