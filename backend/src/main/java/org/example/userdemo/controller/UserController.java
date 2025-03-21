@@ -22,7 +22,7 @@ import static contant.UserConstant.USER_LOGIN_STATE;
  * 用户接口
  */
 
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 @RestController
 //此注解下返回默认为JSON类型
 public class UserController {
