@@ -4,10 +4,10 @@ spring:
     name: user-demo
 
   datasource:
-    driver-class-name: Enter your driver-class-name
-    url: Enter your url
-    username: Enter your username
-    password: Enter your password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql://localhost:3306/center}
+    username: ${DB_USERNAME:test}
+    password: ${DB_PASSWORD:test}
 
   session:
     timeout: 86400
