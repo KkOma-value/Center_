@@ -51,3 +51,6 @@ backend/ENV/
 backend/*.egg-info/
 backend/.installed.cfg
 backend/*.egg
+
+# Docker
+build.sh
